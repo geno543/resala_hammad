@@ -56,7 +56,7 @@ const About = () => {
       id: 2,
       name: 'محمد فوزي نجم',
       role: 'مصمم واجهات المستخدم و مؤسس الموقع',
-      bio: 'أنشأ فكرة موقع رسالة أبوحماد و قام بتصميم النموذج المبدئي للموقع و ساهم بتنفيذ الموقع. مطور ويب يعمل و متخصص في Native Web Dev.',
+      bio: 'مطور ويب متخصص في تطوير مواقع الويب باستخدام تقنية (Native Web Development)، ابتكر فكرة موقع 'رسالة أبوحماد'، وصمم النموذج الأولي للموقع، وساهم بشكل فعّال في تنفيذ وتطوير المنصة.',
       skills: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
       github: 'https://github.com/Mohamedfawzynegm',
       linkedin: 'https://www.linkedin.com/in/mohamed-negm-018317355/',

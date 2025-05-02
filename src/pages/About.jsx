@@ -60,7 +60,7 @@ const About = () => {
       skills: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
       github: 'https://github.com/Mohamedfawzynegm',
       linkedin: 'https://www.linkedin.com/in/mohamed-negm-018317355/',
-      image: '/images/team/profile.png',
+      image: '/images/team/Mohamed Photo-2.jpg',
       showImage: true
     },
     {

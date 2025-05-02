@@ -54,12 +54,12 @@ const About = () => {
     },
     {
       id: 2,
-      name: 'محمد نجم',
-      role: 'مصممة واجهات المستخدم',
-      bio: 'مصممة UI/UX متخصصة في إنشاء تجارب مستخدم سلسة وجذابة، ساهمت في تصميم واجهات موقع رسالة أبوحماد لتعكس هوية المؤسسة.',
-      skills: ['UI/UX Design', 'Figma', 'Adobe XD', 'Responsive Design'],
-      github: 'https://github.com/sara-design',
-      linkedin: 'https://linkedin.com/in/sara-design',
+      name: 'محمد فوزي نجم',
+      role: 'مصمم واجهات المستخدم و مؤسس الموقع',
+      bio: 'أنشأ فكرة موقع رسالة أبوحماد و قام بتصميم النموذج المبدئي للموقع و ساهم بتنفيذ الموقع. مطور ويب يعمل و متخصص في Native Web Dev.',
+      skills: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+      github: 'https://github.com/Mohamedfawzynegm',
+      linkedin: 'https://www.linkedin.com/in/mohamed-negm-018317355/',
       image: '/images/team/profile.png',
       showImage: true
     },

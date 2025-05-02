@@ -28,7 +28,7 @@ const Services = () => {
       // Change this path to update the card placeholder image
       cardImage: '/images/light/light.jpg',
       // Set to true to display the card image, false to show the placeholder
-      showCardImage: false,
+      showCardImage: true,
     },
     {
       id: 3,
@@ -36,6 +36,10 @@ const Services = () => {
       description: 'تُعد معارض جمعية رسالة الخيرية نافذة أمل تُوفر الملابس والاحتياجات الأساسية للأسر المستحقة مجانًا، في أجواء تحفظ الكرامة وتُعزز روح التكافل.',
       images: ['/images/gallary/clothes.jpg', '/images/gallary/clothes-2.jpg'],
       videos: ['/images/gallary/clothes-video.mp4'],
+       // Change this path to update the card placeholder image
+      cardImage: '/images/gallary/clothes.jpg',
+      // Set to true to display the card image, false to show the placeholder
+      showCardImage: true,
     },
     {
       id: 4,
@@ -43,6 +47,10 @@ const Services = () => {
       description: 'نشاط تحقيق الأماني في جمعية رسالة يُجسد الحلم على أرض الواقع، حيث يُلبَّى فيه رجاء المحتاجين، ويُزرع الفرح في القلوب بأبسط الأمنيات.',
       images: ['/images/wish/wish.jpg', '/images/wish/wish-2.jpg'],
       videos: ['/images/wish/wish-video.mp4'],
+       // Change this path to update the card placeholder image
+      cardImage: '/images/wish/wish.jpg',
+      // Set to true to display the card image, false to show the placeholder
+      showCardImage: true,
     },
      {
       id: 5,
@@ -50,6 +58,10 @@ const Services = () => {
       description: 'مساعدات الأسر الفقيرة في جمعية رسالة تُقدَّم بكل حب واهتمام، لتخفيف الأعباء اليومية وبناء حياة أكثر كرامة واستقرارًا للمحتاجين.',
       images: ['/images/help/help.jpg', '/images/help/help-2.jpg'],
       videos: ['/images/help/help-video.mp4'],
+        // Change this path to update the card placeholder image
+      cardImage: '/images/help/help.jpg',
+      // Set to true to display the card image, false to show the placeholder
+      showCardImage: true,
     },
      {
       id: 6,
@@ -57,6 +69,10 @@ const Services = () => {
       description: 'نشاط الزيارات في جمعية رسالة هو لحظة إنسانية صادقة، يذهب فيها المتطوعون بأنفسهم لاحتضان قلوب أنهكها المرض أو الوحدة، حاملين دفء الكلام ولمسة الأمل لمن ظنّ أن لا أحد يطرق بابه.',
       images: ['/images/visit/visit.jpg', '/images/visit/Visit-2.jpg'],
       videos: ['/images/visit/Visit-video.mp4'],
+        // Change this path to update the card placeholder image
+      cardImage: '/images/visit/visit.jpg',
+      // Set to true to display the card image, false to show the placeholder
+      showCardImage: true,
     },
      {
       id: 7,
@@ -64,6 +80,10 @@ const Services = () => {
       description: 'نشاط أصدقاء البيئة في جمعية رسالة هو نداء حبّ للأرض، يقوده متطوعون يُنقّبون عن الأمل بين النفايات، يزرعون الأشجار وينظفون الشوارع، ليصنعوا فرقًا حقيقيًا ويمنحوا الطبيعة حقها في الحياة.',
       images: ['/images/environment/Environment-photo.jpg', '/images/environment/Environment-photo-2.jpg'],
       videos: ['/images/environment/Environment-video.mp4'],
+        // Change this path to update the card placeholder image
+      cardImage: '/images/environment/Environment-photo.jpg',
+      // Set to true to display the card image, false to show the placeholder
+      showCardImage: true,
     },
      {
       id: 8,
@@ -71,6 +91,10 @@ const Services = () => {
       description: 'نشاط إعمار المساجد في جمعية رسالة هو عملٌ يزهر فيه الخير، حيث يمدّ المتطوعون أيديهم لترميم بيوت الله، تنظيفها وتجميلها، في مشهد يفيض بالبركة ويُجسّد حب العبادة بعملٍ صامت لكنه عظيم.',
       images: ['/images/mosque/Mosque.jpg', '/images/mosque/Mosque-2.jpg'],
       videos: ['/images/mosque/Mosque-video.mp4'],
+        // Change this path to update the card placeholder image
+      cardImage: '/images/mosque/Mosque.jpg',
+      // Set to true to display the card image, false to show the placeholder
+      showCardImage: true,
     },
      {
       id: 9,
@@ -78,6 +102,10 @@ const Services = () => {
       description: 'نشاط الأخ الأكبر في جمعية رسالة هو حضن أمانٍ للأطفال الأيتام، حيث يرافقهم متطوعون كإخوة حقيقيين، يمنحونهم وقتًا، وحنانًا، وتوجيهًا يملأ فراغ الفقد بحبٍ لا يُشترى.',
       images: ['/images/bro/bro.jpg', '/images/bro/bro-2.jpg'],
       videos: ['/images/bro/bro-video.mp4'],
+        // Change this path to update the card placeholder image
+      cardImage: '/images/bro/bro.jpg',
+      // Set to true to display the card image, false to show the placeholder
+      showCardImage: true,
     },
      {
       id: 10,
@@ -85,6 +113,10 @@ const Services = () => {
       description: 'نشاط الابن البار في جمعية رسالة هو تعبير عن الوفاء، حيث يقوم المتطوعون بزيارة كبار السن وتقديم الدعم والرعاية لهم، ليشعروا بأنهم ما زالوا محط اهتمام وحب، وكأنهم في حضن أبنائهم الحقيقيين.',
       images: ['/images/son/son.jpg', '/images/son/son-2.jpg'],
       videos: ['/images/son/son-video.mp4'],
+        // Change this path to update the card placeholder image
+      cardImage: '/images/son/son.jpg',
+      // Set to true to display the card image, false to show the placeholder
+      showCardImage: true,
     },
      {
       id: 11,
@@ -92,6 +124,10 @@ const Services = () => {
       description: 'نشاط "افرح" في جمعية رسالة هو لحظات من السعادة الصافية، حيث يجتمع المتطوعون لإدخال البهجة على قلوب الأطفال والأسر المحتاجة، من خلال توزيع الهدايا وتنظيم الفعاليات التي تضيء عيونهم وتملأ حياتهم بالأمل.',
       images: ['/images/happy/Happy-photo.jpg', '/images/happy/Happy-photo-2.jpg'],
       videos: ['/images/happy/Happy-video.mp4'],
+        // Change this path to update the card placeholder image
+      cardImage: '/images/happy/Happy-photo.jpg',
+      // Set to true to display the card image, false to show the placeholder
+      showCardImage: true,
     },
     {
       id: 12,
@@ -99,6 +135,10 @@ const Services = () => {
       description: 'نشاط "ارحموا للرفق بالحيوان" في جمعية رسالة هو نداء إنساني صادق، حيث يتوجه المتطوعون بقلوب رحيمة لرعاية الحيوانات المعذبة والمشردة، يوفرون لهم الغذاء والعلاج والمأوى، في محاولة لتخفيف معاناتهم ومنحهم فرصة جديدة للحياة بسلام ورفق',
       images: ['/images/animal/animal-photo.jpg', '/images/animal/animal-photo-2.jpg'],
       videos: ['/images/animal/animal-video.mp4'],
+       // Change this path to update the card placeholder image
+      cardImage: '/images/animal/animal-photo.jpg',
+      // Set to true to display the card image, false to show the placeholder
+      showCardImage: true,
     },
   ];
 

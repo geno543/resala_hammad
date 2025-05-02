@@ -2,7 +2,7 @@
   "name": "resala-abuhammad",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://geno543.github.io/Resala-Abu-hammad/",
+  "homepage": "/",
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@testing-library/dom": "^10.4.0",

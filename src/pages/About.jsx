@@ -24,7 +24,7 @@ const About = () => {
       // Change this image path to update the image
       image: '/images/Achievements/fady.jpg',
       // Set to true to display the image, false to show the placeholder
-      showImage: false,
+      showImage: true,
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ const About = () => {
       // Change this image path to update the image
       image: '/images/Achievements/kareem.jpg',
       // Set to true to display the image, false to show the placeholder
-      showImage: false,
+      showImage: true,
     },
   ];
 

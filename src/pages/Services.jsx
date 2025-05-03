@@ -309,7 +309,7 @@ const Services = () => {
                         <video
                           className="w-full aspect-video object-cover"
                           controls
-                          poster={selectedActivity.images[0]}
+                          poster={selectedActivity.images[2]}
                         >
                           <source src={video} type="video/mp4" />
                           متصفحك لا يدعم تشغيل الفيديو.

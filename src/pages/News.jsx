@@ -24,9 +24,9 @@ const News = () => {
       date: '١٥ مارس ٢٠٢٥',
       author: 'الإدارة',
       // Change this image path to update the image
-      image: '/images/news/ramadan-campaign.jpg',
+      image: '/images/News/potatos.mp4',
       // Set to true to display the image, false to show the placeholder
-      showImage: false,
+      showImage: true,
       excerpt: 'بفضل تبرعاتكم، تم توزيع كميات من البطاطس على الأسر المستحقة في أبوحماد... شكراً لكل من ساهم في نشر الخير!',
     },
     {
@@ -37,9 +37,9 @@ const News = () => {
       date: '٢٤ يولو ٢٠٢٤',
       author: 'فريق التعليم',
       // Change this image path to update the image
-      image: '/images/news/education-program.jpg',
+      image: '/images/News/Mohamed Explains.jpg',
       // Set to true to display the image, false to show the placeholder
-      showImage: false,
+      showImage: true,
       excerpt: '(Web Development) تم إطلاق كورس مجاني لتعليم مهارة بناء المواقع.',
     },
     {
@@ -50,9 +50,9 @@ const News = () => {
       date: 'خلال هذه الأيام',
       author: 'الإدارة',
       // Change this image path to update the image
-      image: '/images/news/volunteer-ceremony.jpg',
+      image: '/images/News/sak.jpg',
       // Set to true to display the image, false to show the placeholder
-      showImage: false,
+      showImage: true,
       excerpt: 'نستقبل الآن صكوك الأضحية لتوزيع اللحوم على الأسر المستحقة في عيد الأضحى... كن سببًا في إدخال الفرحة على المحتاجين!',
     },
   ];

@@ -24,7 +24,7 @@ const News = () => {
       date: '١٥ مارس ٢٠٢٥',
       author: 'الإدارة',
       // Change this image path to update the image
-      image: '/images/News/potatos.mp4',
+      video: '/images/News/potatos.mp4',
       // Set to true to display the image, false to show the placeholder
       showImage: true,
       excerpt: 'بفضل تبرعاتكم، تم توزيع كميات من البطاطس على الأسر المستحقة في أبوحماد... شكراً لكل من ساهم في نشر الخير!',

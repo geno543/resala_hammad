@@ -419,10 +419,12 @@ const Volunteer = () => {
                   value={selectedActivities[0] || ""}
                 >
                   <option value="">اختر النشاط</option>
-                  <option value="food">توزيع الطعام</option>
-                  <option value="education">دعم التعليم</option>
-                  <option value="medical">المساعدة الطبية</option>
-                  <option value="community">فعاليات المجتمع</option>
+                  <option value="food">فريق الإطعام</option>
+                  <option value="education">فريق إنقاذ حياة</option>
+                  <option value="medical">فريق الاستكشافات</option>
+                  <option value="community">فريق الدعايا</option>
+                  <option value="">فريق اللجنة الطبية</option>
+                  <option value="">فريق مساعدة الأسر الفقيرة</option>
                 </select>
                 {formErrors.activities && (
                   <p className="text-red-500 text-sm mt-1 text-right">{formErrors.activities}</p>

@@ -121,7 +121,7 @@ const Home = () => {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 viewport={{ once: true }}
               >
-                <div className="text-4xl md:text-5xl text-[var(--gradient-start)] mb-4 md:mb-6 transform group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
+                <div className="w-fit mx-auto text-4xl md:text-5xl text-[var(--gradient-start)] mb-4 md:mb-6 transform group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
                 <div className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-[var(--gradient-start)] to-[var(--gradient-end)] bg-clip-text text-transparent">
                   {item.number}
                 </div>
@@ -213,14 +213,14 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-reverse sm:space-x-6">
                 <a
                   href="/volunteer"
-                  className="btn-primary bg-white text-gray-800 hover:bg-gray-100 group"
+                  className="btn-primary bg-white hover:bg-gray-100 group text-white"
                 >
                   <span className="relative z-10">كن متطوعًا</span>
                   <FaArrowLeft className="mr-2 inline-block transform group-hover:-translate-x-1 transition-transform" />
                 </a>
                 <a
                   href="/donate"
-                  className="btn-secondary border-2 border-white text-black hover:bg-white/10"
+                  className="btn-secondary border-2 border-white text-black hover:bg-white/10 hover:text-white"
                 >
                   تبرع الآن
                 </a>

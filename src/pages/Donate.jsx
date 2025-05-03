@@ -225,7 +225,7 @@ const Donate = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 + index * 0.2 }}
               >
-                <div className="text-3xl md:text-4xl text-[var(--gradient-start)] mb-3 md:mb-4">{metric.icon}</div>
+                <div className="text-3xl md:text-4xl text-[var(--gradient-start)] mb-3 md:mb-4 w-fit mx-auto">{metric.icon}</div>
                 <div className="text-2xl md:text-3xl font-bold mb-1 md:mb-2 bg-gradient-to-r from-[var(--gradient-start)] to-[var(--gradient-end)] bg-clip-text text-transparent">
                   {metric.number}
                 </div>

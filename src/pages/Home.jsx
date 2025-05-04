@@ -7,29 +7,29 @@ const Home = () => {
     {
       id: 1,
       // Change this image path to update the image
-      image: '/images/news/news-1.jpg',
+      image: '/images/News/potatos.jpg',
       // Set to true to display the image, false to show the placeholder
-      showImage: false,
-      title: 'إحداث فرق في مجتمعنا',
-      excerpt: 'نسعى دائمًا لتقديم المساعدة للمحتاجين وتحسين ظروف المعيشة في مجتمعنا المحلي.'
+      showImage: true,
+      title: 'توزيع بطاطس للمحتاجين في رسالة أبوحماد',
+      excerpt: 'تم بحمد الله توزيع بطاطس على الأسر المحتاجة بجمعية رسالة فرع أبوحماد.'
     },
     {
       id: 2,
       // Change this image path to update the image
-      image: '/images/news/news-2.jpg',
+      image: '/images/News/sak.jpg',
       // Set to true to display the image, false to show the placeholder
-      showImage: false,
-      title: 'إحداث فرق في مجتمعنا',
-      excerpt: 'نسعى دائمًا لتقديم المساعدة للمحتاجين وتحسين ظروف المعيشة في مجتمعنا المحلي.'
+      showImage: true,
+      title: 'شارك بصك أضحيتك مع رسالة أبوحماد',
+      excerpt: 'ساهم في إدخال الفرحة على المحتاجين بصك أضحيتك مع جمعية رسالة فرع أبوحماد – ايدك تفرّح قلوب كتير!'
     },
     {
       id: 3,
       // Change this image path to update the image
-      image: '/images/news/news-3.jpg',
+      image: '/images/News/Mohamed Explains.jpg',
       // Set to true to display the image, false to show the placeholder
-      showImage: false,
-      title: 'إحداث فرق في مجتمعنا',
-      excerpt: 'نسعى دائمًا لتقديم المساعدة للمحتاجين وتحسين ظروف المعيشة في مجتمعنا المحلي.'
+      showImage: true,
+      title: 'كورس أساسيات البرمجة في رسالة أبوحماد',
+      excerpt: 'تم بحمد الله تنفيذ كورس لتعليم أساسيات البرمجة داخل جمعية رسالة فرع أبوحماد، بهدف تمكين الشباب من مهارات المستقبل.'
     }
   ];
 

@@ -176,10 +176,10 @@ const Home = () => {
                 </div>
                 <div className="p-4 md:p-8 bg-white group-hover:bg-gray-50 transition-colors duration-300">
                   <h3 className="text-lg md:text-xl font-bold mt-2 mb-2 md:mb-3 group-hover:text-[var(--gradient-start)] transition-colors duration-300">
-                    item.title
+                    {item.title}
                   </h3>
                   <p className="text-gray-600 mb-4 text-sm md:text-base group-hover:text-gray-900 transition-colors duration-300">
-                   item.excerpt
+                    {item.excerpt}
                   </p>
                   <a
                     href="/news"

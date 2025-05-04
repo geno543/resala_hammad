@@ -47,10 +47,10 @@ const Header = () => {
           <Link to="/" className="relative z-50">
             <div className="flex items-center">
               <img
-                src="/images/logo/logo_resala.jpg"
-                alt="رسالة أبوحماد"
-                className="h-8 md:h-10 lg:h-12 rounded-full mr-2"
-              />
+  src="/images/logo/logo_resala.jpg"
+  alt="رسالة أبوحماد"
+  className="h-12 md:h-16 lg:h-20 rounded-full mr-2"
+/>
               <div className="text-lg sm:text-xl md:text-2xl font-bold">
                 <span className="bg-gradient-to-r from-[var(--gradient-start)] to-[var(--gradient-end)] bg-clip-text text-transparent">
                   رسالة أبوحماد

@@ -56,7 +56,7 @@ const About = () => {
       id: 2,
       name: 'محمد فوزي نجم',
       role: 'مصمم واجهات المستخدم و مؤسس الموقع',
-      bio: 'مطور ويب متخصص في تطوير مواقع الويب باستخدام تقنية (Native Web Development)، ابتكر فكرة موقع رسالة أبوحماد، وصمم النموذج الأولي للموقع، وساهم بشكل فعّال في تنفيذ وتطوير المنصة.',
+      bio: 'مطور ويب متخصص في تطوير مواقع الويب باستخدام تقنية (Native Web Development)، ابتكر فكرة موقع رسالة أبوحماد، وصمم النموذج الأساسي للموقع، وساهم بشكل فعّال في تنفيذ وتطوير المنصة.',
       skills: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
       github: 'https://github.com/Mohamedfawzynegm',
       linkedin: 'https://www.linkedin.com/in/mohamed-negm-018317355/',
@@ -65,12 +65,12 @@ const About = () => {
     },
     {
       id: 3,
-      name: 'محمد وائل',
+      name: 'إبراهيم وائل',
       role: 'مطور خلفية',
       bio: 'مطور برمجيات متخصص في تطوير أنظمة الخلفية وقواعد البيانات، عمل على تطوير نظام إدارة المحتوى الخاص بموقع رسالة أبوحماد.',
-      skills: ['Node.js', 'Express', 'MongoDB', 'API Development'],
-      github: 'https://github.com/mohamed-backend',
-      linkedin: 'https://linkedin.com/in/mohamed-backend',
+      skills: ['Node.js', 'Express', 'MongoDB', 'React.js'],
+      github: 'https://github.com/ibrahimwael951',
+      linkedin: 'https://www.linkedin.com/in/ibrahim-wael-204091310',
       image: '/images/team/profile.png',
       showImage: true
     }

@@ -41,19 +41,8 @@ const About = () => {
 
   // Web Development Team
   const webDevTeam = [
-    {
+        {
       id: 1,
-      name: 'محمد محمد رمضان',
-      role: 'مطور واجهة أمامية',
-      bio: 'مطور ويب متخصص في تقنيات React وTailwind CSS، ساهم في تطوير واجهة موقع رسالة أبوحماد بتصميم عصري وسهل الاستخدام.',
-      skills: ['React', 'JavaScript', 'Tailwind CSS', 'HTML/CSS'],
-      github: 'https://github.com/geno543',
-      linkedin: 'https://linkedin.com/in/ahmed-dev',
-      image: '/images/team/profile.png',
-      showImage: true
-    },
-    {
-      id: 2,
       name: 'محمد فوزي نجم',
       role: 'مصمم واجهات المستخدم و مؤسس الموقع',
       bio: 'مطور ويب متخصص في تطوير مواقع الويب باستخدام تقنية (Native Web Development)، ابتكر فكرة موقع رسالة أبوحماد، وصمم النموذج الأساسي للموقع، وساهم بشكل فعّال في تنفيذ وتطوير المنصة.',
@@ -64,6 +53,17 @@ const About = () => {
       showImage: true
     },
     {
+      id: 2,
+      name: 'محمد محمد رمضان',
+      role: 'مطور واجهة أمامية',
+      bio: 'مطور ويب متخصص في تقنيات React وTailwind CSS، ساهم في تطوير واجهة موقع رسالة أبوحماد بتصميم عصري وسهل الاستخدام.',
+      skills: ['React', 'JavaScript', 'Tailwind CSS', 'HTML/CSS'],
+      github: 'https://github.com/geno543',
+      linkedin: 'https://linkedin.com/in/ahmed-dev',
+      image: '/images/team/profile.png',
+      showImage: true
+    },
+    {
       id: 3,
       name: 'إبراهيم وائل',
       role: 'مطور خلفية',
@@ -71,7 +71,7 @@ const About = () => {
       skills: ['Node.js', 'Express', 'MongoDB', 'React.js'],
       github: 'https://github.com/ibrahimwael951',
       linkedin: 'https://www.linkedin.com/in/ibrahim-wael-204091310',
-      image: '/images/team/profile.png',
+      image: '/images/team/Ibrahim.jpg',
       showImage: true
     }
   ];

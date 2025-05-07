@@ -52,7 +52,7 @@ const Volunteer = () => {
     };
 
     try {
-      const res = await fetch(process.env.REACT_APP_SHEETDB_API, {
+      const res = await fetch(process.env.REACT_APP_SHEETDB_API_VOLUNTEER, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -80,16 +80,6 @@ const Volunteer = () => {
       setStatus("error");
     }
   };
-
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   email: "",
-  //   phone: "",
-  //   age: "",
-  //   address: "",
-  //   ID: "",
-  //   GraduationDate: "",
-  // });
 
   const activities = [
     {
@@ -333,6 +323,7 @@ const Volunteer = () => {
                 {[
                   { name: 'name', label: 'الاسم الكامل', type: 'text' },
                   { name: 'email', label: 'البريد الإلكتروني', type: 'email' },
+                  { name: 'id', label: 'الرقم القومي', type: 'number' },
                   { name: 'phone', label: 'رقم الهاتف', type: 'tel' },
                   { name: 'age', label: 'العمر', type: 'number' }
                 ].map((field) => (

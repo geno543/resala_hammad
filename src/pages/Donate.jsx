@@ -536,9 +536,9 @@ const Donate = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {[
                 'تبرعك هنا... بيغيّر هناك!',
-                'كل قرش بتتبرع بيه = أمل جديد لحد محتاج,
+                'كل قرش بتتبرع بيه = أمل جديد لحد محتاج',
                 ' بتتبرع وانت متطمن... والتقرير بيوصلك لحد عندك!',
-                ' خيرك في أيد أمينة... وشغّال على الأرض'
+                ' خيرك في أيد أمينة... وشغّال على الأرض',
               ].map((item, index) => (
                 <div key={index} className="flex items-center justify-end">
                   <span className="text-gray-600 text-sm md:text-base">{item}</span>

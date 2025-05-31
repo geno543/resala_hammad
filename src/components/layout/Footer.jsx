@@ -40,7 +40,7 @@ const Footer = () => {
             <motion.div {...fadeInUp}>
               <h3 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">
                 <span className="bg-gradient-to-r from-[var(--gradient-start)] to-[var(--gradient-end)] bg-clip-text text-transparent">
-                  رسالة
+                  رسالة أبوحماد
                 </span>
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed text-sm md:text-base">

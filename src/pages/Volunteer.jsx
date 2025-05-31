@@ -8,6 +8,7 @@ import {
   FaCheck,
   FaArrowLeft,
   FaQuoteRight,
+  FaSearch,
 } from "react-icons/fa";
 
 const Volunteer = () => {

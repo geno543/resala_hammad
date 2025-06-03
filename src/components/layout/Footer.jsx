@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -5,13 +6,18 @@ import {
   FaPhone,
   FaMapMarkerAlt,
   FaEnvelope,
-  FaInstagram,
-  FaTwitter,
-  FaYoutube,
-  FaArrowLeft
+  FaArrowLeft,
+  FaCheckCircle,
+  FaExclamationTriangle,
+  FaSpinner
 } from 'react-icons/fa';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
+  
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -21,7 +27,59 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: <FaFacebook />, url: 'https://www.facebook.com/Resala.AboHamad/' },
+    // Add other social links as needed
   ];
+
+  // Validate email format
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  // Handle newsletter subscription
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    
+    // Reset previous states
+    setSubmitSuccess(false);
+    setSubmitError(null);
+    
+    // Validate email
+    if (!validateEmail(email)) {
+      setSubmitError('يرجى إدخال بريد إلكتروني صحيح');
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    try {
+      const subscriptionData = {
+        date: new Date().toISOString(),
+        email: email,
+        status: "مشترك جديد"
+      };
+      
+      const response = await fetch(process.env.REACT_APP_SHEETDB_API_NEWSLETTER, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify([subscriptionData])
+      });
+      
+      if (!response.ok) {
+        throw new Error('فشل في الاشتراك. الرجاء المحاولة لاحقاً.');
+      }
+      
+      setSubmitSuccess(true);
+      setEmail('');
+    } catch (error) {
+      console.error('Subscription error:', error);
+      setSubmitError(error.message || 'حدث خطأ غير متوقع');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <footer className="relative overflow-hidden">
@@ -75,7 +133,7 @@ const Footer = () => {
                 ].map((link, index) => (
                   <motion.li
                     key={index}
-                    whileHover={{ x: -5 }} /* Changed from 5 to -5 for RTL */
+                    whileHover={{ x: -5 }}
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
                     <Link
@@ -116,22 +174,52 @@ const Footer = () => {
               <p className="text-gray-400 mb-4 md:mb-6 text-sm md:text-base">
                 ابق على اطلاع بأحدث أخبارنا وأنشطتنا.
               </p>
-              <form className="space-y-3">
+              <form onSubmit={handleSubscribe} className="space-y-3">
                 <div className="relative">
                   <input
                     type="email"
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      if (submitError) setSubmitError(null);
+                    }}
                     placeholder="أدخل بريدك الإلكتروني"
                     className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-[var(--gradient-start)] transition-colors duration-300"
+                    disabled={isSubmitting}
                   />
                 </div>
                 <motion.button
                   type="submit"
-                  className="btn-primary w-full"
+                  className="btn-primary w-full flex items-center justify-center"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
+                  disabled={isSubmitting}
                 >
-                  اشترك
+                  {isSubmitting ? (
+                    <>
+                      <FaSpinner className="animate-spin ml-2" />
+                      جاري الإرسال...
+                    </>
+                  ) : (
+                    'اشترك'
+                  )}
                 </motion.button>
+                
+                {/* Success Message */}
+                {submitSuccess && (
+                  <div className="mt-2 p-3 bg-green-900/30 border border-green-500 rounded-lg text-green-400 flex items-center text-sm">
+                    <FaCheckCircle className="ml-2" />
+                    <span>تم الاشتراك بنجاح! شكراً لك</span>
+                  </div>
+                )}
+                
+                {/* Error Message */}
+                {submitError && (
+                  <div className="mt-2 p-3 bg-red-900/30 border border-red-500 rounded-lg text-red-400 flex items-center text-sm">
+                    <FaExclamationTriangle className="ml-2" />
+                    <span>{submitError}</span>
+                  </div>
+                )}
               </form>
             </motion.div>
           </div>

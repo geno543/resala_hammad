@@ -1,12 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  FaCreditCard,
-  FaMobileAlt,
   FaHandHoldingHeart,
   FaRegClock,
   FaShieldAlt,
-  FaChartLine,
   FaUsers,
   FaCheckCircle,
   FaArrowLeft,
@@ -14,25 +11,75 @@ import {
   FaWallet,
   FaMapMarkerAlt,
   FaUserTie,
-  FaMoneyBillWave,
   FaInfoCircle,
-  FaUser,
-  FaPhone,
-  FaEnvelope,
   FaExclamationTriangle,
   FaSpinner
 } from 'react-icons/fa';
 
 const Donate = () => {
-  // Form state
-  const [donationMethod, setDonationMethod] = useState(null); // 'representative' or 'other-methods'
+    const [submitError, setSubmitError] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    const formErrors = validateForm();
+    setErrors(formErrors);
+    setTouched({
+      name: true,
+      phone: true,
+      amount: true,
+      address: true
+    });
+    
+    const hasErrors = Object.values(formErrors).some(error => error);
+    
+    if (!hasErrors && donationMethod === 'representative') {
+      setIsSubmitting(true);
+      setSubmitError(null);
+      
+      try {
+        const donationData = {
+          date: new Date().toISOString(),
+          amount: parseInt(amount),
+          name,
+          phone,
+          address,
+          message: preferredTime || "لا يوجد رسالة",
+        };
+        
+        const response = await fetch(process.env.REACT_APP_SHEETDB_API_DONATION, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify([donationData])
+        });
+        
+        if (!response.ok) {
+          throw new Error('فشل في إرسال البيانات. الرجاء المحاولة لاحقاً.');
+        }
+        setFormSubmitted(true);
+
+        setAmount('');
+        setName('');
+        setPhone('');
+        setAddress('');
+        setPreferredTime('');
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        setSubmitError(error.message || 'حدث خطأ غير متوقع. الرجاء المحاولة لاحقاً.');
+      } finally {
+        setIsSubmitting(false);
+      }
+    }
+  };
+  const [donationMethod, setDonationMethod] = useState(null);
   const [amount, setAmount] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
   const [preferredTime, setPreferredTime] = useState('');
   
-  // Form validation state
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -40,7 +87,6 @@ const Donate = () => {
   
   const predefinedAmounts = ['100', '200', '500', '1000'];
 
-  // Validation functions
   const validateName = (value) => {
     if (!value.trim()) return 'الاسم مطلوب';
     if (value.trim().length < 3) return 'يجب أن يكون الاسم 3 أحرف على الأقل';
@@ -65,7 +111,6 @@ const Donate = () => {
     return '';
   };
 
-  // Validate form
   const validateForm = () => {
     const newErrors = {};
     
@@ -79,12 +124,10 @@ const Donate = () => {
     return newErrors;
   };
 
-  // Handle field blur
   const handleBlur = (field) => {
     setTouched(prev => ({ ...prev, [field]: true }));
   };
 
-  // Handle input change with validation
   const handleInputChange = (field, value) => {
     let validationFn;
     
@@ -120,47 +163,7 @@ const Donate = () => {
     }
   };
 
-  // Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    // Validate all fields
-    const formErrors = validateForm();
-    setErrors(formErrors);
-    setTouched({
-      name: true,
-      phone: true,
-      amount: true,
-      address: true
-    });
-    
-    // Check if there are any errors
-    const hasErrors = Object.values(formErrors).some(error => error);
-    
-    if (!hasErrors && donationMethod === 'representative') {
-      setIsSubmitting(true);
-      
-      // Simulate API call
-      try {
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        console.log({ donationMethod, amount, name, phone, address, preferredTime });
-        
-        // Show success
-        setFormSubmitted(true);
-        
-        // Reset form
-        setAmount('');
-        setName('');
-        setPhone('');
-        setAddress('');
-        setPreferredTime('');
-      } catch (error) {
-        console.error('Error submitting form:', error);
-      } finally {
-        setIsSubmitting(false);
-      }
-    }
-  };
+   
 
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },

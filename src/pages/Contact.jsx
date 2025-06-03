@@ -275,42 +275,6 @@ const Contact = () => {
                 </form>
               
             </motion.div>
-
-            {/* Newsletter Subscription */}
-            <motion.div
-              className="bg-white rounded-2xl shadow-xl p-6 md:p-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 bg-gradient-to-r from-[var(--gradient-start)] to-[var(--gradient-end)] bg-clip-text text-transparent">
-                اشترك في النشرة الإخبارية ليصلك كل جديد
-              </h2>
-              <p className="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">
-                ابق على اطلاع بأحدث أخبارنا وأنشطتنا
-              </p>
-              <form onSubmit={handleNewsletterSubmit} className="space-y-4">
-                <div className="relative">
-                  <input
-                    type="email"
-                    value={newsletter.email}
-                    onChange={(e) => setNewsletter({ email: e.target.value })}
-                    placeholder="أدخل بريدك الإلكتروني"
-                    className="w-full p-3 rounded-xl border-2 border-gray-200 focus:border-[var(--gradient-start)] focus:ring-2 focus:ring-[var(--gradient-start)]/20 transition-all duration-300"
-                    required
-                  />
-                </div>
-                <motion.button
-                  type="submit"
-                  className="btn-secondary w-full flex items-center justify-center group"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <FaPaperPlane className="ml-2 transform group-hover:-translate-x-1 transition-transform" />
-                  اشترك
-                </motion.button>
-              </form>
-            </motion.div>
           </div>
         </div>
       </div>
